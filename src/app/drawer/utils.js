@@ -21,7 +21,9 @@ export function getFromStorage() {
 }
 
 export function parseColor(input) {
-	if (input.substr(0, 1) == '#') {
+	if (input === 'transparent') {
+		return [0, 0, 0, 0];
+	} else if (input.substr(0, 1) == '#') {
 		var collen = (input.length - 1) / 3;
 		var fact = [17, 1, 0.062272][collen - 1];
 		return [
