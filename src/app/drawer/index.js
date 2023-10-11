@@ -242,6 +242,15 @@ export function Drawer() {
 		setDb(colors);
 	};
 
+	useEffect(() => {
+		if (
+			(typeof db !== 'undefined' && typeof db[TOKEN[0]] !== 'undefined' && Object.keys(db[TOKEN[0]]).length === 0) ||
+			Object.keys(db).length === 0
+		) {
+			reset();
+		}
+	});
+
 	const import_file = useCallback((_dropFiles, acceptedFiles, _rejectedFiles) => {
 		const file = acceptedFiles[0];
 		if (file) {
