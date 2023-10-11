@@ -168,7 +168,8 @@ const COLORS = {
 };
 
 export function parseColor(input) {
-	if (typeof COLORS[input.toLowerCase()][0] !== 'undefined') {
+	const key = input.toLowerCase();
+	if (COLORS[key] && COLORS[key][0] !== 'undefined') {
 		return COLORS[input.toLowerCase()];
 	} else if (input.substr(0, 1) == '#') {
 		var collen = (input.length - 1) / 3;
