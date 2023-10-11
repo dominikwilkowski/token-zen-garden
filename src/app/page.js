@@ -21,8 +21,13 @@ import {
 	Toast,
 	useBreakpoints,
 	ChoiceList,
+	ButtonGroup,
+	MediaCard,
+	VideoThumbnail,
+	Banner,
+	KeyboardKey,
 } from '@shopify/polaris';
-import { HomeMinor, OrdersMinor, ProductsMinor } from '@shopify/polaris-icons';
+import { HomeMinor, OrdersMinor, ProductsMinor, AppsMinor, GlobeMinor, DiscountsMinor } from '@shopify/polaris-icons';
 import enTranslations from '@shopify/polaris/locales/en.json';
 
 import { Drawer } from './drawer';
@@ -43,8 +48,8 @@ export default function Home() {
 		accessibilityLabel: 'Shopify Token Zen Garden',
 	};
 	const defaultState = useRef({
-		emailFieldValue: 'dharma@jadedpixel.com',
-		nameFieldValue: 'Jaded Pixel',
+		emailFieldValue: 'tokens@zen-garden.com',
+		nameFieldValue: 'The Tokens Zen Garden',
 	});
 	const [storeName, setStoreName] = useState(defaultState.current.nameFieldValue);
 	const userMenuActions = [
@@ -85,7 +90,7 @@ export default function Home() {
 	const userMenuMarkup = (
 		<TopBar.UserMenu
 			actions={userMenuActions}
-			name="Dharma"
+			name="Tokens"
 			detail={storeName}
 			initials="D"
 			open={userMenuActive}
@@ -130,6 +135,24 @@ export default function Home() {
 										label: 'Products',
 										icon: ProductsMinor,
 									},
+									{
+										url: '#',
+										excludePaths: ['#'],
+										label: 'Tokens',
+										icon: AppsMinor,
+									},
+									{
+										url: '#',
+										excludePaths: ['#'],
+										label: 'Garden',
+										icon: GlobeMinor,
+									},
+									{
+										url: '#',
+										excludePaths: ['#'],
+										label: 'Zen',
+										icon: DiscountsMinor,
+									},
 								]}
 							/>
 						</Navigation>
@@ -155,6 +178,12 @@ export default function Home() {
 						]}
 					>
 						<BlockStack gap={{ xs: '800', sm: '400' }}>
+							<Banner title="The tokens archive" onDismiss={() => {}}>
+								<p>
+									This is not how you should build for the admin. Non of the patterns below are{' '}
+									<KeyboardKey>good</KeyboardKey>!
+								</p>
+							</Banner>
 							<Card>
 								<InlineGrid columns={{ xs: '1fr', md: '2fr 5fr' }} gap="400">
 									<Box as="section" paddingInlineStart={{ xs: 400, sm: 0 }} paddingInlineEnd={{ xs: 400, sm: 0 }}>
@@ -174,31 +203,28 @@ export default function Home() {
 								</InlineGrid>
 							</Card>
 							{smUp ? <Divider /> : null}
-							<Card>
-								<InlineGrid columns={{ xs: '1fr', md: '2fr 5fr' }} gap="400">
-									<Box as="section" paddingInlineStart={{ xs: 400, sm: 0 }} paddingInlineEnd={{ xs: 400, sm: 0 }}>
-										<BlockStack gap="400">
-											<Text as="h3" variant="headingMd">
-												Dimensions
-											</Text>
-											<Text as="p" variant="bodyMd">
-												Interjambs are the rounded protruding bits of your puzzlie piece
-											</Text>
-										</BlockStack>
-									</Box>
-									<BlockStack gap="400">
-										<TextField label="Horizontal" />
-										<TextField label="Interjamb ratio" />
-									</BlockStack>
-								</InlineGrid>
-							</Card>
+							<MediaCard
+								title="Turn your side-project into a business"
+								primaryAction={{
+									content: 'Learn more',
+									onAction: () => {},
+								}}
+								description={`In this course, you’ll learn how the Kular family turned their mom’s recipe book into a global business.`}
+								popoverActions={[{ content: 'Dismiss', onAction: () => {} }]}
+							>
+								<VideoThumbnail
+									videoLength={80}
+									thumbnailUrl="https://burst.shopifycdn.com/photos/business-woman-smiling-in-office.jpg?width=1850"
+									onClick={() => console.log('clicked')}
+								/>
+							</MediaCard>
 							<IndexTable />
 							<Card>
 								<BlockStack gap="400">
 									<Text as="h3" variant="headingMd">
 										Choose your icecream
 									</Text>
-									<InlineGrid columns={{ xs: '1fr', md: '3fr 3fr' }} gap="400">
+									<InlineGrid columns={{ xs: '1fr', md: '1fr 1fr' }} gap="400">
 										<BlockStack gap="400">
 											<ChoiceList
 												choices={[
@@ -222,9 +248,13 @@ export default function Home() {
 											/>
 										</BlockStack>
 									</InlineGrid>
-									<Box>
+									<ButtonGroup>
 										<Button variant="primary">Yumm Ice-cream</Button>
-									</Box>
+										<Button variant="primary" tone="critical">
+											I don&apos;t like Ice-cream
+										</Button>
+										<Button variant="plain">This whole page is bad UX</Button>
+									</ButtonGroup>
 								</BlockStack>
 							</Card>
 						</BlockStack>

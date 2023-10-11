@@ -2,6 +2,16 @@
 	--zen-drawer-width: 20rem;
 }
 
-body {
+body,
+.Polaris-Frame {
 	margin-right: var(--zen-drawer-width);
+}
+
+.Polaris-Frame__TopBar,
+.Polaris-Frame__ContextualSaveBar {
+	width: calc(100% - var(--pc-frame-offset, 0px) - var(--zen-drawer-width));
+}
+
+.Polaris-TopBar__Container {
+	width: calc(100vw - var(--pc-app-provider-scrollbar-width) - var(--zen-drawer-width));
 }
