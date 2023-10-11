@@ -137,9 +137,9 @@ export default function Home() {
 				>
 					<Page
 						backAction={{ content: 'Products', url: '#' }}
-						title="3/4 inch Leather pet collar"
-						titleMetadata={<Badge tone="success">Paid</Badge>}
-						subtitle="Perfect for any pet"
+						title="Polaris token zen garden"
+						titleMetadata={<Badge tone="success">Oooh</Badge>}
+						subtitle="Water some tokens"
 						compactTitle
 						primaryAction={{ content: 'Save', disabled: true }}
 						secondaryActions={[
