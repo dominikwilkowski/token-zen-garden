@@ -1,0 +1,7 @@
+:root {
+	--zen-drawer-width: 18.75rem;
+}
+
+body {
+	margin-right: var(--zen-drawer-width);
+}

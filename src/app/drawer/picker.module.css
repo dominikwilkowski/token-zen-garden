@@ -1,0 +1,27 @@
+.picker {
+}
+
+.swatch {
+	display: inline-block;
+	width: 1.25rem;
+	height: 1.25rem;
+	border: var(--p-border-width-050) solid #fff;
+}
+
+.code {
+	padding: 0.2em 0.4em;
+	margin: 0;
+	font-size: 85%;
+	white-space: break-spaces;
+	background-color: rgb(175, 184, 193);
+	border-radius: 6px;
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		SF Mono,
+		Menlo,
+		Consolas,
+		Liberation Mono,
+		monospace;
+	border: var(--p-border-width-050) solid #fff;
+}
