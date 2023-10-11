@@ -1,6 +1,6 @@
 .drawer {
 	position: absolute;
-	top: 0;
+	top: 56px;
 	right: 0;
 	bottom: 0;
 	width: var(--zen-drawer-width);

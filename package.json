@@ -2,6 +2,7 @@
 	"name": "token-zen-garden",
 	"version": "0.1.0",
 	"private": true,
+	"license": "LGPL-3.0-or-later",
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
@@ -13,6 +14,7 @@
 	},
 	"dependencies": {
 		"@shopify/polaris": "^12.0.0",
+		"@shopify/polaris-icons": "^7.9.0",
 		"next": "13.5.4",
 		"react": "^18",
 		"react-dom": "^18"

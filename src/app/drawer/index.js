@@ -278,7 +278,7 @@ export function Drawer() {
 		<aside className={styles.drawer}>
 			<BlockStack gap="500">
 				<Text variant="headingLg" as="h2">
-					Polaris Tokens Zen Garden
+					Zen garden controls
 				</Text>
 
 				<InlineStack gap="100" blockAlign="center">
