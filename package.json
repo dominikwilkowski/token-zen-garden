@@ -6,8 +6,10 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"format": "prettier --write \"**/*.{js,json,css}\""
+		"format": "prettier --write \"**/*.{js,json,css}\"",
+		"test:lint": "next lint",
+		"test:format": "prettier --list-different \"**/*.{js,json,css}\"",
+		"test": "yarn test:lint && yarn test:format"
 	},
 	"dependencies": {
 		"next": "13.5.4",
