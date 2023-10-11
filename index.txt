@@ -1,6 +1,6 @@
 1:HL["/token-zen-garden/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 2:HL["/token-zen-garden/_next/static/css/04f44dad8c6512af.css","style",{"crossOrigin":""}]
-0:["8DgNX_GpDyL-dCdAZvV1e",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/token-zen-garden/_next/static/css/04f44dad8c6512af.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
+0:["5_2QyUo6P-Lgpo4o_TcHI",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/token-zen-garden/_next/static/css/04f44dad8c6512af.css","precedence":"next","crossOrigin":""}]],"$L4"]]]]
 5:HL["/token-zen-garden/_next/static/css/8c175351bd852112.css","style",{"crossOrigin":""}]
 6:HL["/token-zen-garden/_next/static/css/ab18600fd903fa9c.css","style",{"crossOrigin":""}]
 7:I{"id":1443,"chunks":["272:static/chunks/webpack-4f5624cf720ce822.js","971:static/chunks/fd9d1056-0fb11c33dac2bfd0.js","864:static/chunks/864-8cf4d4cf6be430d1.js"],"name":"","async":false}
