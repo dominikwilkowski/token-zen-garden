@@ -222,8 +222,10 @@ const TOKEN = [
 function get_all_colors() {
 	const colors = {};
 	TOKEN.forEach((token) => {
-		const colorVal = parseColor(getComputedStyle(document.body).getPropertyValue(token));
-		colors[token] = rgbToHsbl({ red: colorVal[0], green: colorVal[1], blue: colorVal[2], alpha: colorVal[3] });
+		if (typeof getComputedStyle !== 'undefined') {
+			const colorVal = parseColor(getComputedStyle(document.body).getPropertyValue(token));
+			colors[token] = rgbToHsbl({ red: colorVal[0], green: colorVal[1], blue: colorVal[2], alpha: colorVal[3] });
+		}
 	});
 	writeToStorage(colors);
 	return colors;
