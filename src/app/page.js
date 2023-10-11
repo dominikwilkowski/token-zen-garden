@@ -1,9 +1,11 @@
 'use client';
 
-import '@shopify/polaris/build/esm/styles.css';
-import enTranslations from '@shopify/polaris/locales/en.json';
 import { AppProvider, Page, LegacyCard, Button } from '@shopify/polaris';
+import enTranslations from '@shopify/polaris/locales/en.json';
+
 import { Drawer } from './drawer';
+
+import '@shopify/polaris/build/esm/styles.css';
 
 import './global.css';
 

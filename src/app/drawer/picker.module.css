@@ -5,7 +5,8 @@
 	display: inline-block;
 	width: 1.25rem;
 	height: 1.25rem;
-	border: var(--p-border-width-050) solid #fff;
+	border: 1px solid #fff;
+	outline: 1px solid #222;
 }
 
 .code {

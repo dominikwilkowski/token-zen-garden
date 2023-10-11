@@ -1,3 +1,21 @@
+'use client';
+
+export function writeToStorage(data) {
+	if (typeof data !== 'object') {
+		throw new Error(`Data to be written to storage is not an object but "${typeof data}"`);
+	}
+	localStorage.setItem('token-zen', JSON.stringify(data));
+}
+
+export function getFromStorage() {
+	const locallyStored = localStorage.getItem('token-zen') || {};
+	try {
+		return JSON.parse(locallyStored);
+	} catch (_) {
+		return {};
+	}
+}
+
 export function parseColor(input) {
 	if (input.substr(0, 1) == '#') {
 		var collen = (input.length - 1) / 3;
