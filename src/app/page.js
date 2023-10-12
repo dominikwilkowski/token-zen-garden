@@ -57,9 +57,11 @@ export default function Home() {
 			items: [{ content: 'Community forums' }],
 		},
 	];
-	const [selected, setSelected] = useState(['hidden']);
+	const [selected1, setSelected1] = useState(['cup']);
+	const [selected2, setSelected2] = useState(['vanilla']);
 
-	const handleChange = useCallback((value) => setSelected(value), []);
+	const handleChoiceSelect1 = useCallback((value) => setSelected1(value), []);
+	const handleChoiceSelect2 = useCallback((value) => setSelected2(value), []);
 
 	const [searchActive, setSearchActive] = useState(false);
 	const [searchValue, setSearchValue] = useState('');
@@ -180,7 +182,7 @@ export default function Home() {
 						<BlockStack gap={{ xs: '800', sm: '400' }}>
 							<Banner title="The tokens archive" onDismiss={() => {}}>
 								<p>
-									This is not how you should build for the admin. Non of the patterns below are{' '}
+									This is not how you should build for the admin. None of the patterns below are{' '}
 									<KeyboardKey>good</KeyboardKey>!
 								</p>
 							</Banner>
@@ -231,8 +233,8 @@ export default function Home() {
 													{ label: 'Cone', value: 'cone' },
 													{ label: 'Cup', value: 'cup' },
 												]}
-												selected={selected}
-												onChange={handleChange}
+												selected={selected1}
+												onChange={handleChoiceSelect1}
 											/>
 										</BlockStack>
 										<BlockStack gap="400">
@@ -243,8 +245,8 @@ export default function Home() {
 													{ label: 'Chocolate', value: 'chocolate' },
 													{ label: 'Strawberry', value: 'strawberry' },
 												]}
-												selected={selected}
-												onChange={handleChange}
+												selected={selected2}
+												onChange={handleChoiceSelect2}
 											/>
 										</BlockStack>
 									</InlineGrid>
