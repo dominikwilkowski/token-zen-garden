@@ -25,8 +25,6 @@ export function Picker({ name, val = {} }) {
 		[name]
 	);
 
-	useEffect(() => on_color_change(val), [val, on_color_change]);
-
 	return (
 		<Card>
 			<BlockStack gap="200">
