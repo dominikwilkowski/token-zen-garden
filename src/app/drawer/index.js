@@ -285,7 +285,7 @@ export function Drawer() {
 					<Button onClick={reset}>Reset</Button>
 					<Button
 						url={`data:text/plain;charset=utf-8,${encodeURIComponent(
-							JSON.stringify({ export: 'token-zen-export', db })
+							JSON.stringify({ export: 'token-zen-export', time: new Date().getTime(), db }, null, '')
 						)}`}
 						download="token-zen-export.export"
 					>
