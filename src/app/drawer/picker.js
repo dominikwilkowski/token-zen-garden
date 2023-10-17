@@ -7,7 +7,7 @@ import { rgbToHsbl, hsbToRgb, parseColor, getFromStorage, writeToStorage } from 
 
 import styles from './picker.module.css';
 
-export function Picker({ name, val = {} }) {
+export function Picker({ name, val = {}, hidden }) {
 	const [color, setColor] = useState(val);
 
 	const on_color_change = useCallback(
@@ -25,15 +25,19 @@ export function Picker({ name, val = {} }) {
 		[name]
 	);
 
+	useEffect(() => on_color_change(val), [val, on_color_change]);
+
 	return (
-		<Card>
-			<BlockStack gap="200">
-				<InlineStack gap="200">
-					<span className={styles.code}>{name}</span>
-					<div className={styles.swatch} style={{ background: `var(${name})` }} />
-				</InlineStack>
-				<ColorPicker onChange={on_color_change} color={color} allowAlpha />
-			</BlockStack>
-		</Card>
+		<div style={{ display: hidden ? 'block' : 'none' }}>
+			<Card>
+				<BlockStack gap="200">
+					<InlineStack gap="200">
+						<span className={styles.code}>{name}</span>
+						<div className={styles.swatch} style={{ background: `var(${name})` }} />
+					</InlineStack>
+					<ColorPicker onChange={on_color_change} color={color} allowAlpha />
+				</BlockStack>
+			</Card>
+		</div>
 	);
 }

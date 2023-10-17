@@ -303,8 +303,8 @@ export function Drawer() {
 					onChange={useCallback((value) => setFilter(value), [])}
 					autoComplete="off"
 				/>
-				{TOKEN.filter((token) => token.includes(filter)).map((token) => (
-					<Picker key={token} name={token} val={db[token]} />
+				{TOKEN.map((token) => (
+					<Picker hidden={token.includes(filter)} key={token} name={token} val={db[token]} />
 				))}
 			</BlockStack>
 		</aside>
